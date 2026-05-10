@@ -19,7 +19,8 @@ export default function OptionMenu() {
                     <div className="menu-content">
                         <Button
                             title="Open Options"
-                            icon="fa-cogs text-primary"
+                            icon="settings"
+                            iconClassName="text-primary"
                             onClick={() => dispatch(openOptions())}
                         >
                             Edit Options <sup>alpha</sup>

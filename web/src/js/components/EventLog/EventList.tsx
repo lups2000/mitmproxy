@@ -4,6 +4,8 @@ import type { VScroll } from "../helpers/VirtualScroll";
 import { calcVScroll } from "../helpers/VirtualScroll";
 import type { EventLogItem } from "../../ducks/eventLog";
 import { shallowEqual } from "react-redux";
+import Icon from "../common/Icon";
+import type { IconName } from "../common/Icon";
 
 type EventLogListProps = {
     events: EventLogItem[];
@@ -107,12 +109,12 @@ export default class EventLogList extends Component<
 }
 
 function LogIcon({ event }: { event: EventLogItem }) {
-    const icon =
+    const icon: IconName =
         {
-            web: "html5",
+            web: "globe",
             debug: "bug",
-            warn: "exclamation-triangle",
+            warn: "warning",
             error: "ban",
         }[event.level] || "info";
-    return <i className={`fa fa-fw fa-${icon}`} />;
+    return <Icon name={icon} fixedWidth />;
 }

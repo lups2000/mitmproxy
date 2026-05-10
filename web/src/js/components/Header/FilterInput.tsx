@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import classnames from "classnames";
 import Filt from "../../filt/filt";
 import FilterDocs from "./FilterDocs";
+import Icon from "../common/Icon";
+import type { IconName } from "../common/Icon";
 
 export enum FilterIcon {
     SEARCH = "search",
@@ -132,6 +134,7 @@ export default class FilterInput extends Component<
     render() {
         const { icon, color, placeholder } = this.props;
         const { value, focus, mousefocus } = this.state;
+        const iconName: IconName = icon;
         return (
             <div
                 className={classnames("filter-input input-group", {
@@ -139,7 +142,11 @@ export default class FilterInput extends Component<
                 })}
             >
                 <span className="input-group-addon">
-                    <i className={"fa fa-fw fa-" + icon} style={{ color }} />
+                    <Icon
+                        name={iconName}
+                        fixedWidth
+                        style={{ color }}
+                    />
                 </span>
                 <input
                     type="text"
