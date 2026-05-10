@@ -54,6 +54,12 @@
         p {
             margin: 0;
         }
+
+        > label {
+            display: inline-flex;
+            align-items: center;
+            min-height: 26px;
+        }
     }
 
     .mode-status {
@@ -102,6 +108,29 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+        }
+
+        .process-refresh {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            width: 26px;
+            height: 26px;
+            flex: 0 0 auto;
+
+            .icon {
+                color: #777;
+                width: 18px;
+                height: 18px;
+            }
+
+            &:hover .icon {
+                color: #444;
+            }
         }
 
         .local-dropdown {
@@ -263,10 +292,38 @@
         gap: 10px;
     }
 
+    .mode-reverse-remove {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        width: 26px;
+        height: 26px;
+        flex: 0 0 auto;
+    }
+
+    .mode-reverse-remove .icon {
+        color: #a94442;
+        width: 18px;
+        height: 18px;
+    }
+
+    .mode-reverse-remove:hover {
+        color: #843534;
+    }
+
+    .mode-reverse-remove:hover .icon {
+        color: #843534;
+    }
+
     .mode-reverse-add-server {
         margin-left: 10px;
         display: flex;
         flex-direction: row;
+        align-items: center;
         cursor: pointer;
         font-weight: 500;
 
@@ -277,8 +334,9 @@
             opacity: 1;
         }
 
-        i {
-            font-size: 2rem;
+        .icon {
+            width: 2rem;
+            height: 2rem;
             margin-right: 5px;
         }
     }
@@ -288,27 +346,33 @@
             background-color: transparent;
             border: none;
             cursor: pointer;
-            font-size: 2rem;
-        }
-
-        > button i {
-            color: #777;
-        }
-
-        &.local-popover > button {
-            font-size: 1rem;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             padding: 0;
             width: 26px;
             height: 26px;
+            line-height: 1;
             flex: 0 0 auto;
         }
 
-        &.local-popover > button i {
-            font-size: 1.5rem;
-            line-height: 1;
+        > button .icon {
+            color: #777;
+            width: 18px;
+            height: 18px;
+        }
+
+        > button:hover .icon {
+            color: #444;
+        }
+
+        &.local-popover > button {
+            margin-left: 0;
+        }
+
+        &.local-popover > button .icon {
+            width: 1.2rem;
+            height: 1.2rem;
         }
 
         @supports (anchor-name: --test) {

@@ -140,13 +140,13 @@ function ReverseToggleRow({
                     />
                 </Popover>
                 {removable && (
-                    <Icon
-                        name="trash"
-                        fixedWidth
-                        size={20}
+                    <button
+                        type="button"
                         className="mode-reverse-remove"
                         onClick={deleteServer}
-                    />
+                    >
+                        <Icon name="trash" fixedWidth />
+                    </button>
                 )}
             </ModeToggle>
             <ServerStatus error={error} backendState={backendState} />

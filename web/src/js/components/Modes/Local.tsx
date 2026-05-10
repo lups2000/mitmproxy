@@ -94,11 +94,13 @@ function LocalRow({
                     </div>
                     <div className="dropdown-container">
                         <LocalDropdown server={server} />
-                        <Icon
-                            name="refresh"
+                        <button
+                            type="button"
                             className="process-refresh"
                             onClick={() => dispatch(fetchProcesses())}
-                        />
+                        >
+                            <Icon name="refresh" />
+                        </button>
                     </div>
                 </div>
             </ModeToggle>
