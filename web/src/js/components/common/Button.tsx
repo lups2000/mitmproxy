@@ -29,13 +29,14 @@ export default function Button({
             disabled={disabled}
             title={title}
         >
-            {icon && (
-                <>
-                    <Icon name={icon} className={iconClassName} />
-                    &nbsp;
-                </>
-            )}
-            {children}
+            <span
+                className={classnames("button-content", {
+                    "has-icon": icon,
+                })}
+            >
+                {icon && <Icon name={icon} className={iconClassName} />}
+                {children && <span className="button-label">{children}</span>}
+            </span>
         </button>
     );
 }

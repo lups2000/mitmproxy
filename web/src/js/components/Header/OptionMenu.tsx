@@ -23,7 +23,7 @@ export default function OptionMenu() {
                             iconClassName="text-primary"
                             onClick={() => dispatch(openOptions())}
                         >
-                            Edit Options <sup>alpha</sup>
+                            Edit Options
                         </Button>
                     </div>
                     <div className="menu-legend">Options Editor</div>

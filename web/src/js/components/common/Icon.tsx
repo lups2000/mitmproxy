@@ -136,8 +136,6 @@ type IconProps = Omit<React.ComponentPropsWithoutRef<"svg">, "name"> & {
     name: IconName;
     fixedWidth?: boolean;
     spin?: boolean;
-    size?: number;
-    strokeWidth?: number;
 };
 
 export default function Icon({
@@ -145,8 +143,6 @@ export default function Icon({
     className,
     fixedWidth = false,
     spin = false,
-    size = 16,
-    strokeWidth = 2,
     ...props
 }: IconProps) {
     const SvgIcon = icons[name];
@@ -161,8 +157,8 @@ export default function Icon({
                 },
                 className,
             )}
-            size={size}
-            strokeWidth={strokeWidth}
+            size={16}
+            strokeWidth={2}
             aria-hidden="true"
             focusable="false"
             {...props}

@@ -145,7 +145,7 @@ function ReverseToggleRow({
                         className="mode-reverse-remove"
                         onClick={deleteServer}
                     >
-                        <Icon name="trash" fixedWidth />
+                        <Icon name="trash" />
                     </button>
                 )}
             </ModeToggle>
