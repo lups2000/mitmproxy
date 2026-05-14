@@ -375,6 +375,26 @@
             height: 1.2rem;
         }
 
+        > button i {
+            color: #777;
+        }
+
+        &.local-popover > button {
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            width: 26px;
+            height: 26px;
+            flex: 0 0 auto;
+        }
+
+        &.local-popover > button i {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
         @supports (anchor-name: --test) {
             > div {
                 margin: 0;
